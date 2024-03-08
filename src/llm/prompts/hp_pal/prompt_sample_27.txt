@@ -1,0 +1,160 @@
+You will write and return only the python program to solve carbon emission problem.
+Here are 3 examples on how to do it,
+
+Input:
+Product name: HP 470 G9 Notebook PC
+Product core number: 2.0
+SSD storage: 128.0 GB
+Power supply: 65.0 W
+Screen size: 17.3"
+
+# solution in Python:
+
+```
+import pandas as pd
+cores = 2.0
+ssd = 128.0
+power = 65.0
+screen_size = 17.3
+def closest_match(key1, input_dict):
+    closest_key = min(input_dict.keys(), key=lambda k: abs(k - key1))
+    return input_dict[closest_key]
+
+cores_mainboard_dict = {2: 64.543, 4: 63.381}
+if cores == 0:
+    carbon_mainboard = 0
+else:
+    carbon_mainboard = closest_match(cores, cores_mainboard_dict)
+ssd_ssd_dict = {128: 39.210, 240: 57.077, 256: 45.246}
+if ssd == 0:
+    carbon_ssd = 0
+else:
+    carbon_ssd = closest_match(ssd, ssd_ssd_dict)
+power_power_dict = {45: 3.708, 65: 4.473, 90: 4.663}
+if power == 0:
+    carbon_power = 0
+else:
+    carbon_power = closest_match(power, power_power_dict)
+power_battery_dict = {45: 4.662, 65: 4.946}
+if power == 0:
+    carbon_battery = 0
+else:
+    carbon_battery = closest_match(power, power_battery_dict)
+if screen_size == 0:
+    carbon_display = 0
+else:
+    carbon_display = 0.05*(screen_size)**2 + 1.67*screen_size - 3.59
+carbon_others = 53.503
+Total_carbon = carbon_mainboard + carbon_ssd + carbon_power + carbon_battery + carbon_display + carbon_others
+carbon_pack = (Total_carbon - 113.45) / 49.75
+Total_carbon += carbon_pack
+```
+
+Input:
+Product name: Victus by HP 15L TG02 Gaming Desktop PC
+Product core number: 12.0
+SSD storage: 512.0 GB
+Power supply: 500.0 W
+Screen size: 0"
+
+# solution in Python:
+
+```
+import pandas as pd
+cores = 12.0
+ssd = 512.0
+power = 500.0
+screen_size = 0
+def closest_match(key1, input_dict):
+    closest_key = min(input_dict.keys(), key=lambda k: abs(k - key1))
+    return input_dict[closest_key]
+
+cores_mainboard_dict = {2: 64.543, 4: 63.381}
+if cores == 0:
+    carbon_mainboard = 0
+else:
+    carbon_mainboard = closest_match(cores, cores_mainboard_dict)
+ssd_ssd_dict = {128: 39.210, 240: 57.077, 256: 45.246}
+if ssd == 0:
+    carbon_ssd = 0
+else:
+    carbon_ssd = closest_match(ssd, ssd_ssd_dict)
+power_power_dict = {45: 3.708, 65: 4.473, 90: 4.663}
+if power == 0:
+    carbon_power = 0
+else:
+    carbon_power = closest_match(power, power_power_dict)
+power_battery_dict = {45: 4.662, 65: 4.946}
+if power == 0:
+    carbon_battery = 0
+else:
+    carbon_battery = closest_match(power, power_battery_dict)
+if screen_size == 0:
+    carbon_display = 0
+else:
+    carbon_display = 0.05*(screen_size)**2 + 1.67*screen_size - 3.59
+carbon_others = 53.503
+Total_carbon = carbon_mainboard + carbon_ssd + carbon_power + carbon_battery + carbon_display + carbon_others
+carbon_pack = (Total_carbon - 113.45) / 49.75
+Total_carbon += carbon_pack
+```
+
+Input:
+Product name: HP t638 Thin Client
+Product core number: 2.0
+SSD storage: 0 GB
+Power supply: 45.0 W
+Screen size: 0"
+
+# solution in Python:
+
+```
+import pandas as pd
+cores = 2.0
+ssd = 0
+power = 45.0
+screen_size = 0
+def closest_match(key1, input_dict):
+    closest_key = min(input_dict.keys(), key=lambda k: abs(k - key1))
+    return input_dict[closest_key]
+
+cores_mainboard_dict = {2: 64.543, 4: 63.381}
+if cores == 0:
+    carbon_mainboard = 0
+else:
+    carbon_mainboard = closest_match(cores, cores_mainboard_dict)
+ssd_ssd_dict = {128: 39.210, 240: 57.077, 256: 45.246}
+if ssd == 0:
+    carbon_ssd = 0
+else:
+    carbon_ssd = closest_match(ssd, ssd_ssd_dict)
+power_power_dict = {45: 3.708, 65: 4.473, 90: 4.663}
+if power == 0:
+    carbon_power = 0
+else:
+    carbon_power = closest_match(power, power_power_dict)
+power_battery_dict = {45: 4.662, 65: 4.946}
+if power == 0:
+    carbon_battery = 0
+else:
+    carbon_battery = closest_match(power, power_battery_dict)
+if screen_size == 0:
+    carbon_display = 0
+else:
+    carbon_display = 0.05*(screen_size)**2 + 1.67*screen_size - 3.59
+carbon_others = 53.503
+Total_carbon = carbon_mainboard + carbon_ssd + carbon_power + carbon_battery + carbon_display + carbon_others
+carbon_pack = (Total_carbon - 113.45) / 49.75
+Total_carbon += carbon_pack
+```
+
+
+How about this input?
+Input:
+Product name: HP EliteBook 830 13 inch G10 Notebook PC ENERGY STAR
+Product core number: 4.0
+SSD storage: 256.0 GB
+Power supply: 65.0 W
+Screen size: 13.3"
+
+
