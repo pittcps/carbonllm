@@ -14,7 +14,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVR
 
 # Load the dataset
-df = pd.read_csv('input/hp_combined_1.csv')
+df = pd.read_csv('../input/hp_combined_1.csv')
 
 # Remove outliers where 'PCF' > 3500
 df = df[df['PCF'] <= 3500]
@@ -32,7 +32,7 @@ df = df[df['PCF'] <= 3500]
 # categorical_features = ['Commercial Name', 'SSD Brand', 'OS', 'Graphics', 'Audio']
 
 # Selecting specified columns
-columns = ['Commercial Name', 'Processor Cores', 'Memory', 'SSD', 'SSD Brand', 'Power', 'OS', 'Graphics', 'Audio', 'PCF']
+columns = ['Commercial Name', 'Processor Cores', 'Memory', 'SSD', 'SSD Brand', 'Power', 'Graphics', 'Audio', 'PCF']
 df_selected = df[columns]
 
 # Separating the target variable and features
@@ -40,10 +40,10 @@ X = df_selected.drop('PCF', axis=1)
 y = df_selected['PCF']
 
 # Defining numeric and categorical features
-# numeric_features = ['Processor Cores', 'Memory', 'SSD', 'Power']
-# categorical_features = ['Commercial Name', 'SSD Brand', 'OS', 'Graphics', 'Audio']
-numeric_features = ['Memory']
-categorical_features = []
+numeric_features = ['Processor Cores', 'Memory', 'SSD', 'Power']
+categorical_features = ['Commercial Name', 'SSD Brand', 'Graphics', 'Audio']
+# numeric_features = ['Memory']
+# categorical_features = []
 
 # Creating pipelines for both numeric and categorical preprocessing
 numeric_transformer = Pipeline(steps=[
@@ -99,8 +99,8 @@ plt.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', lw=2)
 plt.xlabel('Actual')
 plt.ylabel('Predicted')
 plt.title('Actual vs. Predicted PCF')
-plt.savefig('out/xgb_m_carbon_plot.png')
+plt.savefig('output/xgb_m_carbon_plot.png')
 # plt.show()
 
 # Saving the model
-dump(model, 'out/reg_model.joblib')
+dump(model, 'output/reg_model.joblib')
