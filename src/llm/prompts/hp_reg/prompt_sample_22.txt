@@ -1,0 +1,44 @@
+You are now an expert on computing devices. You'll have a product specs input in natural language.  Convert it into JSON format. Complete it based on your knowledge. Please note the following requirements:
+1. The entity types included in JSON must belong to: [Number of processor cores, Memory size, SSD size, Power supply, HDD size].
+2. The JSON format conforms to the following form: {output_format},
+3. The units used in the results are [GB, W]
+
+output_format = {"Number of processor cores": [{{"quantity": 0}}],
+"Memory size": [{{"quantity": 0, "unit": "GB"}}],
+"SSD size": [{{"quantity": 0, "unit": "GB"}}],
+"Power supply": [{{"quantity": 0, "unit": "W"}}],
+"HDD size": [{{"quantity": 0, "unit": "GB"}}]}}
+
+Here are some examples:
+
+input:
+The product is HP Chromebook 11a. The number of processor cores is 8.0. The SSD size is 0 GB. The power supply is 45.0 W. 
+output:
+{"Number of processor cores": [{"quantity": 8.0}],
+"Memory size": [{"quantity": 4.0, "unit": "GB"}],
+"SSD size": [{"quantity": 0, "unit": "GB"}],
+"Power supply": [{"quantity": 45.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The product is HP Spectre x360 16 inch 2-in-1 Laptop PC. The memory size is 16.0 GB. The power supply is 65.0 W. The SSD size is 1000.0 GB. 
+output:
+{"Number of processor cores": [{"quantity": 16.0}],
+"Memory size": [{"quantity": 16.0, "unit": "GB"}],
+"SSD size": [{"quantity": 1000.0, "unit": "GB"}],
+"Power supply": [{"quantity": 65.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The product is HP t638 Thin Client. The HDD size is 0 GB. The power supply is 45.0 W. The memory size is 4.0 GB. 
+output:
+{"Number of processor cores": [{"quantity": 2.0}],
+"Memory size": [{"quantity": 4.0, "unit": "GB"}],
+"SSD size": [{"quantity": 0, "unit": "GB"}],
+"Power supply": [{"quantity": 45.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
+
+
+What is the output for this input?
+input:
+The product is HP Pro mt440 G3 Mobile Thin Client. The memory size is 8.0 GB. The number of processor cores is 4.0. The HDD size is 0 GB. 

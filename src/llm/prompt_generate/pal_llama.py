@@ -71,10 +71,10 @@ def generate_and_save_random_prompts(csv_file_path, num_samples, num_examples_pe
             prompt += f"Input:\nProduct name: {product_name}\nProduct core number: {cores_num}\nSSD storage: {ssd_storage} GB\nPower supply: {power_supply} W\nScreen size: {screen_size}\""
 
             prompts.append(prompt)
-            pcf_values.append(row['Manufacturing2'])
+            pcf_values.append(row['PCF'])
 
         # Save to a text file for each sample
-        output_file_path = f'out/prompts/prompt_sample_{i+1}.txt'
+        output_file_path = f'../prompts/hp_pal/prompt_sample_{i+1}.txt'
         directory = os.path.dirname(output_file_path)
 
         # Check if the directory exists, create it if not
@@ -84,11 +84,11 @@ def generate_and_save_random_prompts(csv_file_path, num_samples, num_examples_pe
         with open(output_file_path, 'w') as file:
             for prompt in prompts:
                 file.write(prompt + "\n")
-        pcf_output_file_path = f'out/pcf_m_values_1.txt'
+        pcf_output_file_path = f'../out/pcf_m_values_1.txt'
         with open(pcf_output_file_path, 'w') as file:
             for pcf in pcf_values:
                 file.write(str(pcf) + "\n")
 
     return [f'prompt_sample_{i+1}.txt' for i in range(num_samples)]
 
-generate_and_save_random_prompts('input/hp_combined_1.csv', 30, 3)
+generate_and_save_random_prompts('../../input/hp_combined_hdd.csv', 30, 3)

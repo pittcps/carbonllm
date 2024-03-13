@@ -13,20 +13,20 @@ from xgboost import XGBRegressor
 import shap
 
 # Load the dataset
-df = pd.read_csv('../input/hp_combined_1.csv')
+df = pd.read_csv('../input/hp_combined_hdd.csv')
 
 # Remove outliers where 'PCF' <= 3500
 df = df[df['PCF'] <= 3500]
 
 # Define features
-columns = ['Commercial Name', 'Processor Cores', 'Memory', 'SSD', 'SSD Brand', 'Power', 'Graphics', 'Audio', 'PCF']
+columns = ['Commercial Name', 'Processor Cores', 'Memory', 'SSD', 'SSD Brand', 'Power', 'HDD', 'Graphics', 'Audio', 'PCF']
 df_selected = df[columns]
 
 X = df_selected.drop('PCF', axis=1)
 y = df_selected['PCF']
 
 # Define categorical and numeric features
-numeric_features = ['Processor Cores', 'Memory', 'SSD', 'Power']
+numeric_features = ['Processor Cores', 'Memory', 'SSD', 'Power', 'HDD']
 categorical_features = ['Commercial Name', 'SSD Brand', 'Graphics', 'Audio']
 
 # Function to apply hashing on a dataframe
@@ -112,10 +112,10 @@ fig, ax = plt.subplots()
 # Sort the feature indices based on mean absolute SHAP values
 sorted_indices = np.argsort(mean_abs_shap_values)
 # Use only the first four features (the non-hashed features)
-top_indices = sorted_indices[-4:]  # Adjust this line to select the top features
+top_indices = sorted_indices[-5:]  # Adjust this line to select the top features
 # Create the bar plot
-ax.barh(range(4), mean_abs_shap_values[top_indices], align='center', color='skyblue')
-ax.set_yticks(range(4))
+ax.barh(range(5), mean_abs_shap_values[top_indices], align='center', color='skyblue')
+ax.set_yticks(range(5))
 ax.set_yticklabels(np.array(feature_names)[top_indices])
 ax.set_xlabel('mean(|SHAP value|) (average impact on model output magnitude)')
 plt.tight_layout()

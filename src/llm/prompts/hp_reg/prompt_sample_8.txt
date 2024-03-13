@@ -1,0 +1,44 @@
+You are now an expert on computing devices. You'll have a product specs input in natural language.  Convert it into JSON format. Complete it based on your knowledge. Please note the following requirements:
+1. The entity types included in JSON must belong to: [Number of processor cores, Memory size, SSD size, Power supply, HDD size].
+2. The JSON format conforms to the following form: {output_format},
+3. The units used in the results are [GB, W]
+
+output_format = {"Number of processor cores": [{{"quantity": 0}}],
+"Memory size": [{{"quantity": 0, "unit": "GB"}}],
+"SSD size": [{{"quantity": 0, "unit": "GB"}}],
+"Power supply": [{{"quantity": 0, "unit": "W"}}],
+"HDD size": [{{"quantity": 0, "unit": "GB"}}]}}
+
+Here are some examples:
+
+input:
+The product is HP EliteBook 650 15.6 inch G10 Notebook PC ENERGY STAR. The memory size is 64.0 GB. The SSD size is 128.0 GB. The HDD size is 0 GB. 
+output:
+{"Number of processor cores": [{"quantity": 10.0}],
+"Memory size": [{"quantity": 64.0, "unit": "GB"}],
+"SSD size": [{"quantity": 128.0, "unit": "GB"}],
+"Power supply": [{"quantity": 65.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The product is HP ProDesk 400 G7 Microtower PC (ENERGY STAR). The memory size is 64.0 GB. The number of processor cores is 2.0. The power supply is 260.0 W. 
+output:
+{"Number of processor cores": [{"quantity": 2.0}],
+"Memory size": [{"quantity": 64.0, "unit": "GB"}],
+"SSD size": [{"quantity": 128.0, "unit": "GB"}],
+"Power supply": [{"quantity": 260.0, "unit": "W"}],
+"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
+
+input:
+The product is HP ProOne 240 23.8 inch G9 All-in-One Desktop PC. The HDD size is 500.0 GB. The memory size is 64.0 GB. The number of processor cores is 0. 
+output:
+{"Number of processor cores": [{"quantity": 0}],
+"Memory size": [{"quantity": 64.0, "unit": "GB"}],
+"SSD size": [{"quantity": 256.0, "unit": "GB"}],
+"Power supply": [{"quantity": 120.0, "unit": "W"}],
+"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
+
+
+What is the output for this input?
+input:
+The product is HP t740 Thin Client. The number of processor cores is 2.0. The power supply is 45.0 W. The memory size is 4.0 GB. 

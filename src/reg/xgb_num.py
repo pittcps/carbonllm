@@ -2,11 +2,10 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler, FunctionTransformer
+from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
-from sklearn.feature_extraction import FeatureHasher
 from joblib import dump
 import matplotlib.pyplot as plt
 from xgboost import XGBRegressor
@@ -18,45 +17,29 @@ df = pd.read_csv('../input/hp_combined_hdd.csv')
 df = df[df['PCF'] <= 3500]
 
 # Define features
-columns = ['Commercial Name', 'Processor Cores', 'Memory', 'SSD', 'SSD Brand', 'Power', 'Graphics', 'Audio', 'HDD', 'PCF']
+columns = ['Processor Cores', 'Memory', 'SSD', 'Power', 'HDD', 'PCF']
 df_selected = df[columns]
 
 X = df_selected.drop('PCF', axis=1)
 y = df_selected['PCF']
 
-# Define categorical and numeric features
+# Define numeric features
 numeric_features = ['Processor Cores', 'Memory', 'SSD', 'Power', 'HDD']
-categorical_features = ['Commercial Name', 'SSD Brand', 'Graphics', 'Audio']
-
-# Function to apply hashing on a dataframe
-def hash_features(df, n_features=10):
-    hasher = FeatureHasher(n_features=n_features, input_type='string')
-    df_as_dicts = df.astype(str).to_dict(orient='records')
-    hashed_features = hasher.transform(df_as_dicts)
-    return hashed_features.toarray()
-
-# Hashing transformer
-hashing_transformer = FunctionTransformer(hash_features, kw_args={'n_features': 10}, validate=False)
 
 # ColumnTransformer for numeric features
 numeric_transformer = Pipeline(steps=[
-    ('imputer', SimpleImputer(strategy='mean')),
+    ('imputer', SimpleImputer(strategy='mean')), # drop these data points; give 0s
     ('scaler', StandardScaler())])
 
 preprocessor = ColumnTransformer(
     transformers=[
-        ('num', numeric_transformer, numeric_features),
-        # Note: Hashing is applied separately
+        ('num', numeric_transformer, numeric_features)
     ])
 
-# Preprocess and split the dataset
-X_numeric_transformed = preprocessor.fit_transform(X[numeric_features])
-X_categorical_hashed = hashing_transformer.transform(X[categorical_features])
+# Preprocess the dataset
+X_transformed = preprocessor.fit_transform(X[numeric_features])
 
-# Combine numeric and hashed categorical features
-X_combined = np.hstack((X_numeric_transformed, X_categorical_hashed))
-
-X_train, X_test, y_train, y_test = train_test_split(X_combined, y, test_size=0.25, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_transformed, y, test_size=0.25, random_state=42)
 
 # Train the model
 model = XGBRegressor(objective='reg:squarederror')
@@ -82,3 +65,4 @@ plt.savefig('output/xgb_m_carbon_plot.png')
 
 # Save the model
 dump(model, 'output/reg_model.joblib')
+dump(preprocessor, 'output/preprocessor.joblib')

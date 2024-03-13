@@ -4,7 +4,7 @@ import re
 from llama_cpp import Llama
 
 # Define Llama model
-LLM = Llama(model_path="./llama-2-7b-chat.ggmlv3.q8_0.bin", n_ctx=10000, n_gpu_layers=1)
+LLM = Llama(model_path="/data/kaz81/src/llama-2-7b-chat.ggmlv3.q8_0.bin", n_ctx=10000, n_gpu_layers=1)
 
 def run_llama_on_file(file_path):
     output_string = ""
