@@ -12,33 +12,33 @@ output_format = {"Number of processor cores": [{{"quantity": 0}}],
 Here are some examples:
 
 input:
-The product is HP EliteOne 840 23.8 inch G9 All-in-One Desktop PC. The power supply is 240.0 W. The SSD size is 256.0 GB. The HDD size is 0 GB. 
+The product is HP EliteDesk 800 G6 Small Form Factor PC (ENERGY STAR). The power supply is 260.0 W. The SSD size is 128.0 GB. The HDD size is 500.0 GB. 
 output:
-{"Number of processor cores": [{"quantity": 0}],
-"Memory size": [{"quantity": 64.0, "unit": "GB"}],
-"SSD size": [{"quantity": 256.0, "unit": "GB"}],
-"Power supply": [{"quantity": 240.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
+{"Number of processor cores": [{"quantity": 2.0}],
+"Memory size": [{"quantity": 128.0, "unit": "GB"}],
+"SSD size": [{"quantity": 128.0, "unit": "GB"}],
+"Power supply": [{"quantity": 260.0, "unit": "W"}],
+"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
 
 input:
-The product is HP Chromebox G3 ENERGY STAR. The memory size is 16.0 GB. The SSD size is 128.0 GB. The power supply is 90.0 W. 
+The product is HP 256 G9 Notebook PC. The memory size is 16.0 GB. The SSD size is 128.0 GB. The power supply is 65.0 W. 
 output:
 {"Number of processor cores": [{"quantity": 2.0}],
 "Memory size": [{"quantity": 16.0, "unit": "GB"}],
 "SSD size": [{"quantity": 128.0, "unit": "GB"}],
-"Power supply": [{"quantity": 90.0, "unit": "W"}],
+"Power supply": [{"quantity": 65.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 input:
-The product is EliteBook 850 G8. The SSD size is 128.0 GB. The number of processor cores is 4.0. The memory size is 64.0 GB. 
+The product is HP Elite SFF 800 G9 Desktop PC. The SSD size is 256.0 GB. The number of processor cores is 0. The memory size is 128.0 GB. 
 output:
-{"Number of processor cores": [{"quantity": 4.0}],
-"Memory size": [{"quantity": 64.0, "unit": "GB"}],
-"SSD size": [{"quantity": 128.0, "unit": "GB"}],
-"Power supply": [{"quantity": 65.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
+{"Number of processor cores": [{"quantity": 0}],
+"Memory size": [{"quantity": 128.0, "unit": "GB"}],
+"SSD size": [{"quantity": 256.0, "unit": "GB"}],
+"Power supply": [{"quantity": 260.0, "unit": "W"}],
+"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
 
 
 What is the output for this input?
 input:
-The product is HP ProDesk 400 G6 Desktop Mini PC (ENERGY STAR). The SSD size is 128.0 GB. The memory size is 64.0 GB. The power supply is 65.0 W. 
+The product is EliteBook 855 G8. The SSD size is 128.0 GB. The memory size is 64.0 GB. The power supply is 65.0 W. 

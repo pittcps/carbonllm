@@ -12,6 +12,9 @@ def generate_and_save_random_prompts(csv_file_path, num_samples, num_examples_pe
     formatted_prompts = []
     pcf_values = []
 
+    # Remove outliers
+    df = df[df['PCF'] <= 1500]
+
     for i in range(num_samples):
         selected_rows = df.sample(n=num_examples_per_sample)
         additional_row = df.sample(n=1)

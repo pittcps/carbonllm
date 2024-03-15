@@ -12,33 +12,33 @@ output_format = {"Number of processor cores": [{{"quantity": 0}}],
 Here are some examples:
 
 input:
-The product is EliteBook 835 G8. The number of processor cores is 4.0. The SSD size is 128.0 GB. The power supply is 65.0 W. 
+The product is HP Pro mt440 G3 Mobile Thin Client. The number of processor cores is 4.0. The SSD size is 0 GB. The power supply is 45.0 W. 
 output:
 {"Number of processor cores": [{"quantity": 4.0}],
-"Memory size": [{"quantity": 64.0, "unit": "GB"}],
-"SSD size": [{"quantity": 128.0, "unit": "GB"}],
+"Memory size": [{"quantity": 8.0, "unit": "GB"}],
+"SSD size": [{"quantity": 0, "unit": "GB"}],
+"Power supply": [{"quantity": 45.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The product is HP Pro c645 Chromebook. The HDD size is 0 GB. The memory size is 16.0 GB. The SSD size is 0 GB. 
+output:
+{"Number of processor cores": [{"quantity": 2.0}],
+"Memory size": [{"quantity": 16.0, "unit": "GB"}],
+"SSD size": [{"quantity": 0, "unit": "GB"}],
 "Power supply": [{"quantity": 65.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 input:
-The product is EliteBook 855 G8. The HDD size is 0 GB. The memory size is 64.0 GB. The SSD size is 128.0 GB. 
+The product is HP Fortis 14” G10 Chromebook Enterprise. The memory size is 16.0 GB. The SSD size is 0 GB. The HDD size is 0 GB. 
 output:
-{"Number of processor cores": [{"quantity": 4.0}],
-"Memory size": [{"quantity": 64.0, "unit": "GB"}],
-"SSD size": [{"quantity": 128.0, "unit": "GB"}],
+{"Number of processor cores": [{"quantity": 2.0}],
+"Memory size": [{"quantity": 16.0, "unit": "GB"}],
+"SSD size": [{"quantity": 0, "unit": "GB"}],
 "Power supply": [{"quantity": 65.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
-
-input:
-The product is HP 23.8 inch All-in-One Desktop PC 24-cb. The memory size is 128.0 GB. The SSD size is 256.0 GB. The HDD size is 0 GB. 
-output:
-{"Number of processor cores": [{"quantity": 0}],
-"Memory size": [{"quantity": 128.0, "unit": "GB"}],
-"SSD size": [{"quantity": 256.0, "unit": "GB"}],
-"Power supply": [{"quantity": 330.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 
 What is the output for this input?
 input:
-The product is HP ProDesk 400 G7 Microtower PC (ENERGY STAR). The number of processor cores is 2.0. The memory size is 64.0 GB. The power supply is 260.0 W. 
+The product is HP ProOne 440 23.8 inch G9 All-in-One Desktop PC. The number of processor cores is 0. The memory size is 64.0 GB. The power supply is 120.0 W. 

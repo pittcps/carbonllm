@@ -14,7 +14,7 @@ from xgboost import XGBRegressor
 df = pd.read_csv('../input/hp_combined_hdd.csv')
 
 # Remove outliers
-df = df[df['PCF'] <= 3500]
+df = df[df['PCF'] <= 1500]
 
 # Define features
 columns = ['Processor Cores', 'Memory', 'SSD', 'Power', 'HDD', 'PCF']
@@ -23,12 +23,26 @@ df_selected = df[columns]
 X = df_selected.drop('PCF', axis=1)
 y = df_selected['PCF']
 
+# Drop rows with missing 'Processor Cores' or 'SSD'
+original_num_datapoints = len(X)
+X = X.dropna(subset=['Processor Cores'])
+y = y[X.index]
+
+# Print the number of datapoints after dropping
+num_datapoints_after_drop = len(X)
+print(f'Number of data points after dropping rows with missing values "Processor Cores": {num_datapoints_after_drop}')
+print(f'Number of dropped data points: {original_num_datapoints - num_datapoints_after_drop}')
+
+
 # Define numeric features
 numeric_features = ['Processor Cores', 'Memory', 'SSD', 'Power', 'HDD']
 
 # ColumnTransformer for numeric features
+# numeric_transformer = Pipeline(steps=[
+#     ('imputer', SimpleImputer(strategy='mean')), # drop these data points; give 0s
+#     ('scaler', StandardScaler())])
 numeric_transformer = Pipeline(steps=[
-    ('imputer', SimpleImputer(strategy='mean')), # drop these data points; give 0s
+    ('imputer', SimpleImputer(strategy='constant', fill_value=0)),
     ('scaler', StandardScaler())])
 
 preprocessor = ColumnTransformer(

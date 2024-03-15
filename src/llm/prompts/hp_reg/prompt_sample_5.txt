@@ -12,25 +12,16 @@ output_format = {"Number of processor cores": [{{"quantity": 0}}],
 Here are some examples:
 
 input:
-The product is HP Desktop Pro G6 Microtower PC ENERGY STAR. The power supply is 180.0 W. The number of processor cores is 2.0. The HDD size is 500.0 GB. 
-output:
-{"Number of processor cores": [{"quantity": 2.0}],
-"Memory size": [{"quantity": 64.0, "unit": "GB"}],
-"SSD size": [{"quantity": 128.0, "unit": "GB"}],
-"Power supply": [{"quantity": 180.0, "unit": "W"}],
-"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
-
-input:
-The product is HP ZBook Firefly 15 G8. The SSD size is 256.0 GB. The memory size is 64.0 GB. The number of processor cores is 4.0. 
+The product is HP Z4 G4 Workstation. The power supply is 1000.0 W. The number of processor cores is 4.0. The HDD size is 0 GB. 
 output:
 {"Number of processor cores": [{"quantity": 4.0}],
-"Memory size": [{"quantity": 64.0, "unit": "GB"}],
-"SSD size": [{"quantity": 256.0, "unit": "GB"}],
-"Power supply": [{"quantity": 65.0, "unit": "W"}],
+"Memory size": [{"quantity": 512.0, "unit": "GB"}],
+"SSD size": [{"quantity": 240.0, "unit": "GB"}],
+"Power supply": [{"quantity": 1000.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 input:
-The product is HP 250 G9 Notebook PC. The number of processor cores is 2.0. The HDD size is 0 GB. The power supply is 65.0 W. 
+The product is HP 256 G9 Notebook PC. The SSD size is 128.0 GB. The memory size is 16.0 GB. The number of processor cores is 2.0. 
 output:
 {"Number of processor cores": [{"quantity": 2.0}],
 "Memory size": [{"quantity": 16.0, "unit": "GB"}],
@@ -38,7 +29,16 @@ output:
 "Power supply": [{"quantity": 65.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
+input:
+The product is HP Z6 G4 Workstation. The number of processor cores is 4.0. The HDD size is 0 GB. The power supply is 1000.0 W. 
+output:
+{"Number of processor cores": [{"quantity": 4.0}],
+"Memory size": [{"quantity": 512.0, "unit": "GB"}],
+"SSD size": [{"quantity": 240.0, "unit": "GB"}],
+"Power supply": [{"quantity": 1000.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
+
 
 What is the output for this input?
 input:
-The product is HP 23.8 inch All-in-One Desktop PC 24-cb. The memory size is 128.0 GB. The number of processor cores is 0. The HDD size is 0 GB. 
+The product is HP Pro SFF 400 G9 Desktop PC. The memory size is 128.0 GB. The number of processor cores is 0. The HDD size is 500.0 GB. 

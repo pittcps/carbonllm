@@ -12,33 +12,33 @@ output_format = {"Number of processor cores": [{{"quantity": 0}}],
 Here are some examples:
 
 input:
-The product is HP Chromebook 11a. The number of processor cores is 8.0. The SSD size is 0 GB. The power supply is 45.0 W. 
-output:
-{"Number of processor cores": [{"quantity": 8.0}],
-"Memory size": [{"quantity": 4.0, "unit": "GB"}],
-"SSD size": [{"quantity": 0, "unit": "GB"}],
-"Power supply": [{"quantity": 45.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
-
-input:
-The product is HP Spectre x360 16 inch 2-in-1 Laptop PC. The memory size is 16.0 GB. The power supply is 65.0 W. The SSD size is 1000.0 GB. 
-output:
-{"Number of processor cores": [{"quantity": 16.0}],
-"Memory size": [{"quantity": 16.0, "unit": "GB"}],
-"SSD size": [{"quantity": 1000.0, "unit": "GB"}],
-"Power supply": [{"quantity": 65.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
-
-input:
-The product is HP t638 Thin Client. The HDD size is 0 GB. The power supply is 45.0 W. The memory size is 4.0 GB. 
+The product is HP Chromebook x360 12b. The number of processor cores is 2.0. The SSD size is 0 GB. The power supply is 45.0 W. 
 output:
 {"Number of processor cores": [{"quantity": 2.0}],
-"Memory size": [{"quantity": 4.0, "unit": "GB"}],
+"Memory size": [{"quantity": 16.0, "unit": "GB"}],
 "SSD size": [{"quantity": 0, "unit": "GB"}],
 "Power supply": [{"quantity": 45.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The product is HP ProOne 240 23.8 inch G9 All-in-One Desktop PC. The memory size is 64.0 GB. The power supply is 120.0 W. The SSD size is 256.0 GB. 
+output:
+{"Number of processor cores": [{"quantity": 0}],
+"Memory size": [{"quantity": 64.0, "unit": "GB"}],
+"SSD size": [{"quantity": 256.0, "unit": "GB"}],
+"Power supply": [{"quantity": 120.0, "unit": "W"}],
+"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
+
+input:
+The product is HP Elite Tower 600 G9 Desktop PC. The HDD size is 500.0 GB. The power supply is 260.0 W. The memory size is 128.0 GB. 
+output:
+{"Number of processor cores": [{"quantity": 0}],
+"Memory size": [{"quantity": 128.0, "unit": "GB"}],
+"SSD size": [{"quantity": 256.0, "unit": "GB"}],
+"Power supply": [{"quantity": 260.0, "unit": "W"}],
+"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
 
 
 What is the output for this input?
 input:
-The product is HP Pro mt440 G3 Mobile Thin Client. The memory size is 8.0 GB. The number of processor cores is 4.0. The HDD size is 0 GB. 
+The product is HP 255 G9 Notebook PC. The memory size is 16.0 GB. The number of processor cores is 2.0. The HDD size is 0 GB. 

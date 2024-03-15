@@ -3,13 +3,14 @@ import re
 import json
 from llama_cpp import Llama
 from joblib import load
+import pandas as pd
 
 # Load the saved model and preprocessor
-model = load('output/reg_model.joblib')
-preprocessor = load('output/preprocessor.joblib')
+model = load('../reg/output/reg_model.joblib')
+preprocessor = load('../reg/output/preprocessor.joblib')
 
 # Define Llama model
-LLM = Llama(model_path="/data/kaz81/src/llama-2-7b-chat.ggmlv3.q8_0.bin", n_ctx=10000, n_gpu_layers=1)
+LLM = Llama(model_path="/data/kaz81/src/llama-2-7b.Q4_K_M.gguf", n_ctx=10000, n_gpu_layers=1)
 
 def parse_json_and_predict(json_output):
     """
@@ -38,19 +39,23 @@ def run_llama_on_file(file_path):
 
     with open(file_path, 'r') as file:
         prompt = file.read()
+        output_string += "\nLlama Input:\n"
+        output_string += prompt
+        # print(prompt)
 
-    # Simulate running Llama model to get the JSON output
-    # In your actual implementation, replace this with the Llama model call
-    output = {"Number of processor cores": [{"quantity": 4.0}],
-              "Memory size": [{"quantity": 64.0, "unit": "GB"}],
-              "SSD size": [{"quantity": 240.0, "unit": "GB"}],
-              "Power supply": [{"quantity": 1000.0, "unit": "W"}],
-              "HDD size": [{"quantity": 0, "unit": "GB"}]}
-    json_output = json.dumps(output)  # Simulating the JSON output from Llama
+    output1 = LLM(prompt, max_tokens=0)
+    output = output1["choices"][0]["text"]
+    print("Llama Output:")
+    print(output)
+    output_string += "\nLlama Output:\n"
+    output_string += output
 
-    # Parse the JSON output and predict
     try:
-        result = parse_json_and_predict(json_output)
+        formatted_output = output.replace("output:", "").strip()
+        # json_output = json.loads(formatted_output)
+
+        # Parse the JSON output and predict
+        result = parse_json_and_predict(formatted_output)  # Assuming this function expects a dictionary
         output_string += f"Predicted PCF: {result}\n"
         print(f"Predicted PCF: {result}")
     except Exception as e:

@@ -12,16 +12,25 @@ output_format = {"Number of processor cores": [{{"quantity": 0}}],
 Here are some examples:
 
 input:
-The product is HP Pro mt440 G3 Mobile Thin Client. The number of processor cores is 4.0. The power supply is 45.0 W. The HDD size is 0 GB. 
+The product is HP ProBook 455 15.6 inch G9 Notebook PC. The number of processor cores is 4.0. The power supply is 65.0 W. The HDD size is 0 GB. 
 output:
 {"Number of processor cores": [{"quantity": 4.0}],
-"Memory size": [{"quantity": 8.0, "unit": "GB"}],
+"Memory size": [{"quantity": 32.0, "unit": "GB"}],
+"SSD size": [{"quantity": 128.0, "unit": "GB"}],
+"Power supply": [{"quantity": 65.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The product is HP Fortis 11 inch G9 Chromebook. The SSD size is 0 GB. The memory size is 16.0 GB. The HDD size is 0 GB. 
+output:
+{"Number of processor cores": [{"quantity": 4.0}],
+"Memory size": [{"quantity": 16.0, "unit": "GB"}],
 "SSD size": [{"quantity": 0, "unit": "GB"}],
 "Power supply": [{"quantity": 45.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 input:
-The product is HP 255 G9 Notebook PC. The SSD size is 128.0 GB. The memory size is 16.0 GB. The HDD size is 0 GB. 
+The product is HP 245 G9 Notebook PC. The number of processor cores is 2.0. The power supply is 65.0 W. The HDD size is 0 GB. 
 output:
 {"Number of processor cores": [{"quantity": 2.0}],
 "Memory size": [{"quantity": 16.0, "unit": "GB"}],
@@ -29,16 +38,7 @@ output:
 "Power supply": [{"quantity": 65.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
-input:
-The product is HP Fortis 14” G10 Chromebook Enterprise. The number of processor cores is 2.0. The power supply is 65.0 W. The HDD size is 0 GB. 
-output:
-{"Number of processor cores": [{"quantity": 2.0}],
-"Memory size": [{"quantity": 16.0, "unit": "GB"}],
-"SSD size": [{"quantity": 0, "unit": "GB"}],
-"Power supply": [{"quantity": 65.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
-
 
 What is the output for this input?
 input:
-The product is HP EliteBook 650 15.6 inch G10 Notebook PC ENERGY STAR. The power supply is 65.0 W. The number of processor cores is 10.0. The memory size is 64.0 GB. 
+The product is HP EliteOne 840 23.8 inch G9 All-in-One Desktop PC. The power supply is 240.0 W. The number of processor cores is 0. The memory size is 64.0 GB. 
