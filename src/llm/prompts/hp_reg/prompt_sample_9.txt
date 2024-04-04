@@ -12,33 +12,33 @@ output_format = {"Number of processor cores": [{{"quantity": 0}}],
 Here are some examples:
 
 input:
-The product is HP 250 G9 Notebook PC. The SSD size is 128.0 GB. The power supply is 65.0 W. The number of processor cores is 2.0. 
+The product is HP ProDesk 405 G6 Desktop Mini PC (ENERGY STAR). The memory size is 64.0 GB. The HDD size is 500.0 GB. The power supply is 65.0 W. 
 output:
 {"Number of processor cores": [{"quantity": 2.0}],
-"Memory size": [{"quantity": 16.0, "unit": "GB"}],
+"Memory size": [{"quantity": 64.0, "unit": "GB"}],
 "SSD size": [{"quantity": 128.0, "unit": "GB"}],
 "Power supply": [{"quantity": 65.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
+"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
 
 input:
-The product is HP EliteBook x360 830 G8 Notebook PC. The number of processor cores is 4.0. The HDD size is 0 GB. The memory size is 32.0 GB. 
+The product is EliteBook 850 G7. The memory size is 64.0 GB. The SSD size is 128.0 GB. The power supply is 65.0 W. 
 output:
 {"Number of processor cores": [{"quantity": 4.0}],
-"Memory size": [{"quantity": 32.0, "unit": "GB"}],
+"Memory size": [{"quantity": 64.0, "unit": "GB"}],
 "SSD size": [{"quantity": 128.0, "unit": "GB"}],
 "Power supply": [{"quantity": 65.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 input:
-The product is HP EliteDesk 800 G6 Small Form Factor PC (ENERGY STAR). The SSD size is 128.0 GB. The HDD size is 500.0 GB. The memory size is 128.0 GB. 
+The product is HP Chromebook 11 G8 Education Edition. The SSD size is 0 GB. The HDD size is 0 GB. The memory size is 8.0 GB. 
 output:
-{"Number of processor cores": [{"quantity": 2.0}],
-"Memory size": [{"quantity": 128.0, "unit": "GB"}],
-"SSD size": [{"quantity": 128.0, "unit": "GB"}],
-"Power supply": [{"quantity": 260.0, "unit": "W"}],
-"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
+{"Number of processor cores": [{"quantity": 8.0}],
+"Memory size": [{"quantity": 8.0, "unit": "GB"}],
+"SSD size": [{"quantity": 0, "unit": "GB"}],
+"Power supply": [{"quantity": 45.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 
 What is the output for this input?
 input:
-The product is HP t740 Thin Client. The number of processor cores is 2.0. The SSD size is 0 GB. The HDD size is 0 GB. 
+The product is HP Fortis 11 inch G9 Chromebook Enterprise. The HDD size is 0 GB. The SSD size is 0 GB. The number of processor cores is 4.0. 

@@ -1,0 +1,26 @@
+You are now an expert on computing devices. You"ll have a product specs input in natural language. Convert it into JSON format. Complete it based on your knowledge. Please note the following requirements:
+1. The entity types included in JSON must belong to: ["Model", "RAM", "SSD", "Display"].
+2. The JSON format conforms to the following form: {"Model": [{"quantity": 0}], "RAM": [{"quantity": 0, "unit": "GB"}], "SSD": [{"quantity": 0, "unit": "GB"}], "Display": [{"quantity": 0, "unit": "inch"}]},
+3. The units used in the results are ["GB", "GB", "inch"]
+
+Here are some examples:
+
+input:
+The Model is HP Elite x360 1040 14 inch G10 2-in-1 Notebook PC ENERGY STAR. The Display is 14.0 inch. The RAM is 16.0 GB.
+output:
+{"Model": [{"quantity": "HP Elite x360 1040 14 inch G10 2-in-1 Notebook PC ENERGY STAR"}], "RAM": [{"quantity": 16.0, "unit": "GB"}], "SSD": [{"quantity": 256.0, "unit": "GB"}], "Display": [{"quantity": 14.0, "unit": "inch"}]}
+
+input:
+The Model is HP ZBook Firefly 15 G8. The Display is 15.6 inch. The SSD is 256.0 GB.
+output:
+{"Model": [{"quantity": "HP ZBook Firefly 15 G8"}], "RAM": [{"quantity": 64.0, "unit": "GB"}], "SSD": [{"quantity": 256.0, "unit": "GB"}], "Display": [{"quantity": 15.6, "unit": "inch"}]}
+
+input:
+The Model is ThinkPad C14 Gen 1 Chromebook. The SSD is 64.0 GB. The RAM is 4.0 GB.
+output:
+{"Model": [{"quantity": "ThinkPad C14 Gen 1 Chromebook"}], "RAM": [{"quantity": 4.0, "unit": "GB"}], "SSD": [{"quantity": 64.0, "unit": "GB"}], "Display": [{"quantity": 14.0, "unit": "inch"}]}
+
+
+What is the output for this input?
+input:
+The Model is HP ProDesk 400 G7 Small Form Factor PC (ENERGY STAR). The Display is 0 inch. The RAM is 64.0 GB.

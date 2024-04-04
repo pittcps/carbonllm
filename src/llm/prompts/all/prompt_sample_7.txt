@@ -1,0 +1,26 @@
+You are now an expert on computing devices. You"ll have a product specs input in natural language. Convert it into JSON format. Complete it based on your knowledge. Please note the following requirements:
+1. The entity types included in JSON must belong to: ["Model", "RAM", "SSD", "Display"].
+2. The JSON format conforms to the following form: {"Model": [{"quantity": 0}], "RAM": [{"quantity": 0, "unit": "GB"}], "SSD": [{"quantity": 0, "unit": "GB"}], "Display": [{"quantity": 0, "unit": "inch"}]},
+3. The units used in the results are ["GB", "GB", "inch"]
+
+Here are some examples:
+
+input:
+The Model is Inspiron 14 5420. The RAM is 24.0 GB. The SSD is 2000.0 GB.
+output:
+{"Model": [{"quantity": "Inspiron 14 5420"}], "RAM": [{"quantity": 24.0, "unit": "GB"}], "SSD": [{"quantity": 2000.0, "unit": "GB"}], "Display": [{"quantity": 14.0, "unit": "inch"}]}
+
+input:
+The Model is HP Chromebook x360 12b. The RAM is 16.0 GB. The SSD is 0 GB.
+output:
+{"Model": [{"quantity": "HP Chromebook x360 12b"}], "RAM": [{"quantity": 16.0, "unit": "GB"}], "SSD": [{"quantity": 0, "unit": "GB"}], "Display": [{"quantity": 12.0, "unit": "inch"}]}
+
+input:
+The Model is HP Z2 Tower G9 Workstation Desktop PC. The RAM is 128.0 GB. The SSD is 256.0 GB.
+output:
+{"Model": [{"quantity": "HP Z2 Tower G9 Workstation Desktop PC"}], "RAM": [{"quantity": 128.0, "unit": "GB"}], "SSD": [{"quantity": 256.0, "unit": "GB"}], "Display": [{"quantity": 0, "unit": "inch"}]}
+
+
+What is the output for this input?
+input:
+The Model is Latitude 3190 2-in-1. The SSD is 256.0 GB. The Display is 11.6 inch.

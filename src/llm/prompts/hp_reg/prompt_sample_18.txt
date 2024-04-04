@@ -12,16 +12,7 @@ output_format = {"Number of processor cores": [{{"quantity": 0}}],
 Here are some examples:
 
 input:
-The product is HP Pro c645 Chromebook. The HDD size is 0 GB. The number of processor cores is 2.0. The SSD size is 0 GB. 
-output:
-{"Number of processor cores": [{"quantity": 2.0}],
-"Memory size": [{"quantity": 16.0, "unit": "GB"}],
-"SSD size": [{"quantity": 0, "unit": "GB"}],
-"Power supply": [{"quantity": 65.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
-
-input:
-The product is HP Elite Mini 600 G9 Desktop PC. The power supply is 260.0 W. The number of processor cores is 0. The SSD size is 256.0 GB. 
+The product is HP Elite Tower 600 G9 Desktop PC. The number of processor cores is 0. The SSD size is 256.0 GB. The HDD size is 500.0 GB. 
 output:
 {"Number of processor cores": [{"quantity": 0}],
 "Memory size": [{"quantity": 128.0, "unit": "GB"}],
@@ -30,15 +21,24 @@ output:
 "HDD size": [{"quantity": 500.0, "unit": "GB"}]}
 
 input:
-The product is HP Elite t655 Thin Client. The power supply is 90.0 W. The number of processor cores is 6.0. The memory size is 32.0 GB. 
+The product is HP Z4 G4 Workstation. The HDD size is 0 GB. The SSD size is 240.0 GB. The memory size is 512.0 GB. 
+output:
+{"Number of processor cores": [{"quantity": 4.0}],
+"Memory size": [{"quantity": 512.0, "unit": "GB"}],
+"SSD size": [{"quantity": 240.0, "unit": "GB"}],
+"Power supply": [{"quantity": 1000.0, "unit": "W"}],
+"HDD size": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The product is HP Elite Dragonfly 13.5 inch G3 Notebook PC. The number of processor cores is 6.0. The memory size is 32.0 GB. The HDD size is 0 GB. 
 output:
 {"Number of processor cores": [{"quantity": 6.0}],
 "Memory size": [{"quantity": 32.0, "unit": "GB"}],
-"SSD size": [{"quantity": 0, "unit": "GB"}],
-"Power supply": [{"quantity": 90.0, "unit": "W"}],
+"SSD size": [{"quantity": 128.0, "unit": "GB"}],
+"Power supply": [{"quantity": 65.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 
 What is the output for this input?
 input:
-The product is HP Elite c640 G3 Chromebook. The power supply is 45.0 W. The SSD size is 128.0 GB. The memory size is 16.0 GB. 
+The product is HP Elite Tower 880 G9 Desktop PC. The memory size is 128.0 GB. The HDD size is 500.0 GB. The SSD size is 256.0 GB. 

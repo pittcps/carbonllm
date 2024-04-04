@@ -1,31 +1,58 @@
-Commercial Name,Processor Cores,Memory,SSD,Power,HDD
-HP Desktop Pro G6 Microtower PC ENERGY STAR,0,0,128.0,180.0,500.0
-HP Elite mt645 G7 Mobile Thin Client,4.0,16.0,0,0,0.0
-HP Fortis x360 11 inch G4 Chromebook,0,16.0,0,45.0,0.0
-HP Pro c645 Chromebook,2.0,16.0,0,0,0.0
-HP Pro SFF 400 G9 Desktop PC,0.0,128.0,0,0,500.0
-EliteBook 830 G8,4.0,64.0,0,65.0,0
-HP EliteOne 840 23.8 inch G9 All-in-One Desktop PC,0,64.0,256.0,0,0.0
-HP Elite x2 G4,4.0,16.0,0,65.0,0
-HP t740 Thin Client,2.0,0,0.0,0,0.0
-HP EliteOne 840 23.8 inch G9 All-in-One Desktop PC,0.0,64.0,0,240.0,0
-HP Chromebook x360 12b,0,0,0.0,45.0,0.0
-HP Chromebox Enterprise G4 ENERGY STAR,5.0,0,0,90.0,0.0
-OMEN by HP 25L Gaming Desktop PC GT15 ENERGY STAR,12.0,0,512.0,600.0,0
-HP EliteBook 860 16 inch G10 Notebook PC ENERGY STAR,4.0,64.0,0,0,0.0
-HP EliteDesk 800 G6 Small Form Factor PC (ENERGY STAR),2.0,128.0,128.0,0,0
-HP 470 G7 Notebook PC,0,16.0,128.0,0,0.0
-HP Elite SFF 800 G9 Desktop PC,0,128.0,0,260.0,500.0
-HP Elite c640 G3 Chromebook,0,16.0,128.0,45.0,0
-HP EliteBook 865 16 inch G10 Notebook PC ENERGY STAR,4.0,0,0,65.0,0.0
-HP Pro x360 Fortis 11 inch G11 Notebook PC (ENERGY STAR),4.0,0,0,65.0,0.0
-HP EliteBook 860 16 inch G10 Notebook PC ENERGY STAR,0,64.0,256.0,65.0,0
-HP 255 G9 Notebook PC,2.0,16.0,0,0,0.0
-HP Spectre x360 2-in-1 Laptop 14t-ef ENERGY STAR,0,16.0,1000.0,0,0.0
-HP Elite Dragonfly 13.5 inch G3 Notebook PC,6.0,0,128.0,0,0.0
-HP Z2 Tower G9 Workstation Desktop PC,0,128.0,256.0,0,500.0
-HP t430 Thin Client,0,0,0.0,45.0,0.0
-EliteBook 855 G8,0,0,128.0,65.0,0.0
-HP ProOne 440 23.8 inch G9 All-in-One Desktop PC,0.0,64.0,0,120.0,0
-EliteBook 850 G7,4.0,0,128.0,65.0,0
-EliteBook 855 G8,0,64.0,128.0,65.0,0
+Model,RAM,SSD,Display
+ThinkPad X1 Yoga Gen 7,0,256.0,14.0
+HP EliteBook 830 13 inch G10 Notebook PC ENERGY STAR,32.0,256.0,0
+ThinkPad E15 Gen 4 Intel,0,256.0,15.6
+ThinkPad T15p Gen 3,0,256.0,15.6
+HP Elite t655 Thin Client,32.0,0.0,0
+TMP414-41,0,512.0,14.0
+Latitude 3190 2-in-1,0,256.0,11.6
+HP Chromebook x2 11,0,0.0,11.0
+Latitude 3580,0,256.0,15.6
+ThinkPad E14 Gen 4 Intel,32.0,0,14.0
+TMP214-54,16.0,512.0,0
+HP 245 G9 Notebook PC,16.0,128.0,0
+Latitude 3380,8.0,128.0,0
+HP Chromebook x2 11,0,0.0,11.0
+HP EliteBook 840 G8 Notebook PC ENERGY STAR,64.0,0,14.0
+HP ProBook 455 15.6 inch G9 Notebook PC,0,128.0,15.6
+ThinkPad L14 Gen 3 Intel,0,256.0,14.0
+C922,0,32.0,14.0
+ThinkPad P16 Gen 1,0,256.0,16.0
+HP ProOne 240 23.8 inch G9 All-in-One Desktop PC,64.0,0,23.8
+HP Pro SFF 400 G9 Desktop PC,0,256.0,0.0
+HP Chromebook 11a,4.0,0,11.0
+HP Chromebook 11a,4.0,0.0,0
+ThinkPad T16 Gen 1 Intel,0,256.0,16.0
+ThinkPad L15 Gen 3 Intel,64.0,256.0,0
+ThinkPad L13 Gen 3 Intel,8.0,256.0,0
+R722T,8.0,32.0,0
+HP Chromebook 14 inch,0,0.0,14.0
+HP Spectre x360 16 inch 2-in-1 Laptop PC,16.0,1000.0,0
+CP714-1WN,8.0,256.0,0
+HP 470 G9 Notebook PC,16.0,0,17.3
+ThinkPad T16 Gen 1 Intel,40.0,256.0,0
+SF314-511,16.0,512.0,0
+ThinkPad P15v Gen 3 AMD,64.0,0,15.6
+HP Z6 G4 Workstation,0,240.0,0.0
+TMP416-41,0,512.0,16.0
+HP EliteBook 645 14 inch G10 Notebook PC ENERGY STAR,64.0,0,14.0
+ThinkPad L13 Gen 3 Intel,8.0,0,13.3
+HP ProDesk 400 G7 Microtower PC (ENERGY STAR),64.0,128.0,0
+TMP414RN-52,16.0,512.0,0
+HP Chromebook x360 13.3 inch,16.0,0.0,0
+HP Pro c645 Chromebook,16.0,0.0,0
+ThinkPad X1 Carbon Gen 10,8.0,0,14.0
+HP Elite SFF 600 G9 Desktop PC,128.0,0,0.0
+ThinkPad P15v Gen 3 Intel,64.0,0,15.6
+TMP215-53,16.0,256.0,0
+CP514-3WH,16.0,256.0,0
+HP ProBook 440 14 inch G10 Notebook PC ENERGY STAR,32.0,0,14.0
+HP Elite x2 G4,16.0,0,13.0
+Inspiron 14 Plus 7420,0,2000.0,14.0
+HP EliteOne 840 23.8 inch G9 All-in-One Desktop PC,64.0,0,23.8
+Latitude 3350,0,0.0,13.3
+HP ProDesk 400 G7 Small Form Factor PC (ENERGY STAR),64.0,0,0.0
+HP Elite c645 14 inch G2 Chromebook,0,128.0,14.0
+CP514-3HH,8.0,0,14.0
+OMEN by HP 25L Gaming Desktop PC GT15 ENERGY STAR,16.0,512.0,0
+HP ProDesk 400 G7 Microtower PC (ENERGY STAR),64.0,0,0.0

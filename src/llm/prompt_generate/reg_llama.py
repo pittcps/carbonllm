@@ -3,10 +3,14 @@ import os
 import math
 import random
 
-def generate_and_save_random_prompts(csv_file_path, num_samples, num_examples_per_sample, random_seed=None):
-    # Set the random seed
-    if random_seed is not None:
-        random.seed(random_seed)
+def generate_and_save_random_prompts(csv_file_path, num_samples, num_examples_per_sample, random_seed=None, random_seeds_file=None):
+    # Read random seeds from the file if provided
+    random_seeds = []
+    if random_seeds_file:
+        with open(random_seeds_file, 'r') as f:
+            for line in f:
+                seeds = line.strip().split()  # Split each line into seeds
+                random_seeds.extend(map(int, seeds))
 
     df = pd.read_csv(csv_file_path)
     formatted_prompts = []
@@ -16,8 +20,16 @@ def generate_and_save_random_prompts(csv_file_path, num_samples, num_examples_pe
     df = df[df['PCF'] <= 1500]
 
     for i in range(num_samples):
-        selected_rows = df.sample(n=num_examples_per_sample)
-        additional_row = df.sample(n=1)
+        if random_seeds and len(random_seeds) >= 2:
+            seed1 = random_seeds[i * 2]
+            seed2 = random_seeds[i * 2 + 1]
+        else:
+            seed1 = None
+            seed2 = None
+
+        selected_rows = df.sample(n=num_examples_per_sample, random_state=seed1)
+        additional_row = df.sample(n=1, random_state=seed2)
+
         prompts = []
 
         start_string = "You are now an expert on computing devices. You'll have a product specs input in natural language.  Convert it into JSON format. Complete it based on your knowledge. Please note the following requirements:\n1. The entity types included in JSON must belong to: [Number of processor cores, Memory size, SSD size, Power supply, HDD size].\n2. The JSON format conforms to the following form: {output_format},\n3. The units used in the results are [GB, W]\n\noutput_format = {\"Number of processor cores\": [{{\"quantity\": 0}}],\n\"Memory size\": [{{\"quantity\": 0, \"unit\": \"GB\"}}],\n\"SSD size\": [{{\"quantity\": 0, \"unit\": \"GB\"}}],\n\"Power supply\": [{{\"quantity\": 0, \"unit\": \"W\"}}],\n\"HDD size\": [{{\"quantity\": 0, \"unit\": \"GB\"}}]}}\n\nHere are some examples:\n"
@@ -137,4 +149,4 @@ def generate_and_save_random_prompts(csv_file_path, num_samples, num_examples_pe
 
     return [f'prompt_sample_{i+1}.txt' for i in range(num_samples)]
 
-generate_and_save_random_prompts('../../input/hp_combined_hdd.csv', 30, 3, random_seed=42)
+generate_and_save_random_prompts('../../input/hp_combined_hdd.csv', 30, 3, random_seed=42, random_seeds_file="../output/random_seeds.txt")

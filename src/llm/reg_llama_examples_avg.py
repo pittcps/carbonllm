@@ -9,13 +9,24 @@ preprocessor = load('../reg/output/preprocessor.joblib')
 data = pd.read_csv('output/prompt_example_specs.csv')
 
 # Define constants for replacement (avg)
+# constants = {
+#     'Processor Cores': 4.27,
+#     'Memory': 69,
+#     'SSD': 221.043,
+#     'HDD' : 566.667,
+#     'Power' : 167.083
+# } # HP
+# constants = {
+#     'RAM': 20.5,
+#     'SSD': 1086.667,
+#     'Display' : 13.885
+# } # DELL
+
 constants = {
-    'Processor Cores': 4.27,
-    'Memory': 69,
-    'SSD': 221.043,
-    'HDD' : 566.667,
-    'Power' : 167.083
-}
+    'RAM': 45.143,
+    'SSD': 312.162,
+    'Display' : 14.679
+} # All
 
 # Replace zeros with constants
 for column, constant in constants.items():

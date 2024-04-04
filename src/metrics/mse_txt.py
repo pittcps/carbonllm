@@ -12,10 +12,10 @@ with open('../llm/output/pcf_values.txt', 'r') as file:
 #     predicted_values = np.array([float(line.strip()) for line in file])
 # with open('../llm/output/pcf_values_llama_combined.txt', 'r') as file:
 #     predicted_values = np.array([float(line.strip()) for line in file])
-# with open('../llm/output/avg_examples_pcf_values.txt', 'r') as file:
-#     predicted_values = np.array([float(line.strip()) for line in file])
-with open('../llm/output/avg_pcf_values_llama_combined.txt', 'r') as file:
+with open('../llm/output/avg_examples_pcf_values.txt', 'r') as file:
     predicted_values = np.array([float(line.strip()) for line in file])
+# with open('../llm/output/avg_pcf_values_llama_combined.txt', 'r') as file:
+#     predicted_values = np.array([float(line.strip()) for line in file])
 
 # Compute Mean Squared Error (MSE)
 mse = np.mean((predicted_values - ground_truth) ** 2)
@@ -35,11 +35,11 @@ plt.title('Actual vs. Predicted PCF')
 # plt.savefig('output/llama_plot.png')
 # plt.savefig('output/examples_plot.png')
 # plt.savefig('output/0_combined_plot.png')
-# plt.savefig('output/avg_plot.png')
-plt.savefig('output/avg_combined_plot.png')
+plt.savefig('output/avg_plot.png')
+# plt.savefig('output/avg_combined_plot.png')
 plt.close()
 
 # Print computed metrics
-print(f'Mean Squared Error (MSE): {mse}')
-print(f'Mean Absolute Error (MAE): {mae}')
-print(f'Mean Absolute Percentage Error (MAPE): {mape}%')
+print(f'MSE: {mse}')
+print(f'MAE: {mae}')
+print(f'MAPE: {mape}%')

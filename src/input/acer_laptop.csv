@@ -1,0 +1,49 @@
+Company,Device,Model,CPU,GPU,RAM,SSD,Display,Wi-Fi/Bluetooth,PCF
+Acer,Laptop,A515-56,Intel Core i3 i3-1115G4,Intel UHD Graphics,4,128,15.6, IEEE 802.11ax ,451.5
+Acer,Laptop,TMP214-55G,Intel Core i5 i5-1135G7,Intel Iris Xe Graphics,16,512,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,484.0
+Acer,Laptop,AN515-57,Intel Core i5 i5-11400H,NVIDIA GeForce GTX 1650,8,256,15.6,Wi-Fi 6 AX 1650i IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,527.0
+Acer,Laptop,AV15-53P,Intel Core i5 i5-1335U,Intel Iris Xe Graphics eligible,8,512,15.6, IEEE 802.11ax Bluetooth 5.1 or above,363.0
+Acer,Laptop,AV14-51,Intel Core i5 i5-1235U,Intel Iris Xe Graphics,8,512,14.0,Wireless Wi-Fi 6E AX211 IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,452.0
+Acer,Laptop,AV15-51,Intel Core i5 i5-1155G7,Intel Iris Xe Graphics,8,256,15.6,Wireless Wi-Fi 6 AX201 IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,432.5
+Acer,Laptop,AV15-52,Intel Core i5 i5-1235U,Intel Iris Xe Graphics,8,512,15.6, IEEE 802.11ax Bluetooth 5.1 or above,419.0
+Acer,Laptop,C734,Intel Celeron N4500,Intel UHD Graphics,4,32,11.6, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,242.0
+Acer,Laptop,C734T,Intel Celeron N4500,Intel UHD Graphics,4,32,11.6, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,242.0
+Acer,Laptop,CB314-2H,MediaTek ARM ,MediaTek Mali-G72 MP3,4,32,14.0, IEEE 802.11ac Bluetooth 5.0,301.5
+Acer,Laptop,C922,MediaTek ARM ,MediaTek Mali-G72 MP3,4,32,14.0, IEEE 802.11ac Bluetooth 5.0,301.5
+Acer,Laptop,C922T,MediaTek ARM ,MediaTek Mali-G72 MP3,4,32,14.0, IEEE 802.11ac Bluetooth 4.2,301.5
+Acer,Laptop,CB314-3H,Intel Celeron N5100,Intel UHD Graphics,8,64,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,283.5
+Acer,Laptop,CB314-3HT,Intel Celeron N4500,Intel UHD Graphics,4,128,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,283.5
+Acer,Laptop,C934,Intel Celeron N4500,Intel UHD Graphics,4,32,14.0,Wi-Fi 6 AX201 IEEE 802.11ax ,283.5
+Acer,Laptop,CB514-1W,Intel Core i5 i5-1135G7,Intel Iris Xe Graphics,8,128,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,347.5
+Acer,Laptop,CB514-1WT,Intel Core i3 i3-1115G4,Intel UHD Graphics,8,128,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,347.5
+Acer,Laptop,CB515-1W,Intel Core i5 i5-1135G7,Intel Iris Xe Graphics,8,128,15.6, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,392.5
+Acer,Laptop,CB515-1WT,Intel Core i3 i3-1115G4,Intel UHD Graphics,8,128,15.6, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,392.5
+Acer,Laptop,CBV514-1H,Intel Core i3 i3-1215U,Intel UHD Graphics,8,128,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,445.0
+Acer,Laptop,CBV514-1HT,Intel Core i5 i5-1235U,Intel Iris Xe Graphics,16,256,14.0,Wireless Wi-Fi 6E AX211 IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.2,445.0
+Acer,Laptop,CP513-1H,Qualcomm Kryo 468 ,Qualcomm Adreno 618,4,64,13.3, IEEE 802.11ac Bluetooth 5.0,356.0
+Acer,Laptop,R841LT,Qualcomm Kryo 468 ,Qualcomm Adreno 618,8,128,13.3, IEEE 802.11a/b/g/n/ac Bluetooth 5.0,356.0
+Acer,Laptop,R841T,Qualcomm Kryo 468 ,Qualcomm Adreno 618,4,64,13.3, IEEE 802.11a/b/g/n/ac Bluetooth 5.0,356.0
+Acer,Laptop,CP514-2H,Intel Core i3 i3-1110G4,Intel UHD Graphics,8,128,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,387.5
+Acer,Laptop,CP514-3HH,AMD Ryzen 5 5625C,AMD Radeon Graphics,8,128,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,420.5
+Acer,Laptop,CP514-3WH,AMD Ryzen 5 5625C,AMD Radeon Graphics,16,256,14.0, IEEE 802.11ax Bluetooth 5.1 or above,420.5
+Acer,Laptop,CP514-3H,AMD Ryzen 5 5625C,AMD Radeon Graphics,8,128,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,420.5
+Acer,Laptop,CP714-1WN,Intel Core i3 i3-1215U,Intel Iris Xe Graphics,8,256,14.0,Wireless Wi-Fi 6E AX211 IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,451.5
+Acer,Laptop,R722T,MediaTek ARM ,MediaTek Mali-G72 MP3,8,32,11.6, IEEE 802.11ac Bluetooth 4.2,252.0
+Acer,Laptop,R753T,Intel Celeron N4500,Intel UHD Graphics,4,32,11.6, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,241.5
+Acer,Laptop,R853TA,Intel Celeron N5100,Intel UHD Graphics,4,32,12.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,285.0
+Acer,Laptop,R853TNA,Intel Pentium Silver N6000,Intel UHD Graphics,8,64,12.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,285.0
+Acer,Laptop,SF314-511,Intel Core i7 i7-1165G7,Intel Iris Xe Graphics,16,512,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,318.5
+Acer,Laptop,TMB311-32,Intel Celeron N5100,Intel UHD Graphics,4,128,11.6, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,310.0
+Acer,Laptop,TMP214-41-G2,AMD Ryzen 5 PRO 5650U,AMD Radeon Graphics,8,256,14.0,Wi-Fi 6 AX200 IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,382.0
+Acer,Laptop,TMP214-53,Intel Core i5 i5-1135G7,Intel Iris Xe Graphics,16,512,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,484.0
+Acer,Laptop,TMP214-53G,Intel Core i5 i5-1135G7,Intel Iris Xe Graphics,16,512,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,484.0
+Acer,Laptop,TMP214-54,Intel Core i7 i7-1255U,Intel Iris Xe Graphics,16,512,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,368.0
+Acer,Laptop,TMP215-53,Intel Core i5 i5-1135G7,Intel Iris Xe Graphics,16,256,15.6, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,382.5
+Acer,Laptop,TMP414-41,AMD Ryzen 5 PRO 6650U,AMD Radeon 660M,16,512,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,371.0
+Acer,Laptop,TMP414-51,Intel Core i5 i5-1135G7,Intel Iris Xe Graphics,8,512,14.0,Wireless Wi-Fi 6 AX201 IEEE 802.11 a/g/n/ac/ax Bluetooth 5.0,417.0
+Acer,Laptop,TMP414-52,Intel Core i5 i5-1240P,Intel Iris Xe Graphics,16,512,14.0,Wireless Wi-Fi 6E AX211 IEEE 802.11 a/b/g/n/ac/ax ,519.0
+Acer,Laptop,TMP414RN-41,AMD Ryzen 7 PRO 6850U,AMD Radeon Graphics,16,512,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,425.5
+Acer,Laptop,TMP414RN-52,Intel Core i5 i5-1240P,Intel Iris Xe Graphics,16,512,14.0,Wireless Wi-Fi 6E AX211 IEEE 802.11 a/b/g/n/ac/ax ,531.5
+Acer,Laptop,TMP416-41,AMD Ryzen 5 PRO 6650U,AMD Radeon 660M,16,512,16.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,472.5
+Acer,Laptop,TMP416-51,Intel Core i5 i5-1240P,Intel Iris Xe Graphics,16,512,16.0,Wireless Wi-Fi 6E AX211 IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.1 or above,495.5
+Acer,Laptop,TMP614-52,Intel Core i7 i7-1165G7,Intel Iris Xe Graphics,16,512,14.0, IEEE 802.11 a/b/g/n/ac/ax Bluetooth 5.0,460.5

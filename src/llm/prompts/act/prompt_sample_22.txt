@@ -1,0 +1,26 @@
+You are now an expert on computing devices. You"ll have a product specs input in natural language. Convert it into JSON format. Complete it based on your knowledge. Please note the following requirements:
+1. The entity types included in JSON must belong to: ["Commercial Name", "Processor Cores", "Memory", "SSD", "Power", "HDD"].
+2. The JSON format conforms to the following form: {"Commercial Name": [{"quantity": 0}], "Processor Cores": [{"quantity": 0}], "Memory": [{"quantity": 0, "unit": "GB"}], "SSD": [{"quantity": 0, "unit": "GB"}], "Power": [{"quantity": 0, "unit": "W"}], "HDD": [{"quantity": 0, "unit": "GB"}]},
+3. The units used in the results are ["GB", "GB", "W", "GB"]
+
+Here are some examples:
+
+input:
+The commercial name is HP EliteBook 650 15.6 inch G10 Notebook PC ENERGY STAR. The ssd is 128.0 GB. The power is 65.0 W. The hdd is 0 GB.
+output:
+{"Commercial Name": [{"quantity": "HP EliteBook 650 15.6 inch G10 Notebook PC ENERGY STAR"}], "Processor Cores": [{"quantity": 10.0}], "Memory": [{"quantity": 64.0, "unit": "GB"}], "SSD": [{"quantity": 128.0, "unit": "GB"}], "Power": [{"quantity": 65.0, "unit": "W"}], "HDD": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The commercial name is HP Z4 G4 Workstation. The memory is 512.0 GB. The power is 1000.0 W. The ssd is 240.0 GB.
+output:
+{"Commercial Name": [{"quantity": "HP Z4 G4 Workstation"}], "Processor Cores": [{"quantity": 4.0}], "Memory": [{"quantity": 512.0, "unit": "GB"}], "SSD": [{"quantity": 240.0, "unit": "GB"}], "Power": [{"quantity": 1000.0, "unit": "W"}], "HDD": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The commercial name is HP ProOne 240 23.8 inch G9 All-in-One Desktop PC. The power is 120.0 W. The memory is 64.0 GB. The hdd is 500.0 GB.
+output:
+{"Commercial Name": [{"quantity": "HP ProOne 240 23.8 inch G9 All-in-One Desktop PC"}], "Processor Cores": [{"quantity": 0}], "Memory": [{"quantity": 64.0, "unit": "GB"}], "SSD": [{"quantity": 256.0, "unit": "GB"}], "Power": [{"quantity": 120.0, "unit": "W"}], "HDD": [{"quantity": 500.0, "unit": "GB"}]}
+
+
+What is the output for this input?
+input:
+The commercial name is HP Elite x360 1040 14 inch G9 2-in-1Notebook PC. The processor cores is 10.0. The ssd is 256.0 GB. The memory is 16.0 GB.

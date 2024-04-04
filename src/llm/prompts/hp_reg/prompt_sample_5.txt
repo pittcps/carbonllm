@@ -12,33 +12,33 @@ output_format = {"Number of processor cores": [{{"quantity": 0}}],
 Here are some examples:
 
 input:
-The product is HP Z4 G4 Workstation. The power supply is 1000.0 W. The number of processor cores is 4.0. The HDD size is 0 GB. 
+The product is HP Chromebook 14b. The power supply is 45.0 W. The HDD size is 0 GB. The number of processor cores is 2.0. 
 output:
-{"Number of processor cores": [{"quantity": 4.0}],
-"Memory size": [{"quantity": 512.0, "unit": "GB"}],
-"SSD size": [{"quantity": 240.0, "unit": "GB"}],
-"Power supply": [{"quantity": 1000.0, "unit": "W"}],
+{"Number of processor cores": [{"quantity": 2.0}],
+"Memory size": [{"quantity": 8.0, "unit": "GB"}],
+"SSD size": [{"quantity": 0, "unit": "GB"}],
+"Power supply": [{"quantity": 45.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 input:
-The product is HP 256 G9 Notebook PC. The SSD size is 128.0 GB. The memory size is 16.0 GB. The number of processor cores is 2.0. 
+The product is HP EliteBook 840 G8 Notebook PC ENERGY STAR. The power supply is 65.0 W. The SSD size is 128.0 GB. The memory size is 64.0 GB. 
 output:
-{"Number of processor cores": [{"quantity": 2.0}],
-"Memory size": [{"quantity": 16.0, "unit": "GB"}],
+{"Number of processor cores": [{"quantity": 4.0}],
+"Memory size": [{"quantity": 64.0, "unit": "GB"}],
 "SSD size": [{"quantity": 128.0, "unit": "GB"}],
 "Power supply": [{"quantity": 65.0, "unit": "W"}],
 "HDD size": [{"quantity": 0, "unit": "GB"}]}
 
 input:
-The product is HP Z6 G4 Workstation. The number of processor cores is 4.0. The HDD size is 0 GB. The power supply is 1000.0 W. 
+The product is HP Pro SFF 400 G9 Desktop PC. The power supply is 260.0 W. The number of processor cores is 0. The HDD size is 500.0 GB. 
 output:
-{"Number of processor cores": [{"quantity": 4.0}],
-"Memory size": [{"quantity": 512.0, "unit": "GB"}],
-"SSD size": [{"quantity": 240.0, "unit": "GB"}],
-"Power supply": [{"quantity": 1000.0, "unit": "W"}],
-"HDD size": [{"quantity": 0, "unit": "GB"}]}
+{"Number of processor cores": [{"quantity": 0}],
+"Memory size": [{"quantity": 128.0, "unit": "GB"}],
+"SSD size": [{"quantity": 256.0, "unit": "GB"}],
+"Power supply": [{"quantity": 260.0, "unit": "W"}],
+"HDD size": [{"quantity": 500.0, "unit": "GB"}]}
 
 
 What is the output for this input?
 input:
-The product is HP Pro SFF 400 G9 Desktop PC. The memory size is 128.0 GB. The number of processor cores is 0. The HDD size is 500.0 GB. 
+The product is HP ProDesk 600 G6 PCI Microtower PC (ENERGY STAR ). The number of processor cores is 2.0. The power supply is 260.0 W. The HDD size is 500.0 GB. 

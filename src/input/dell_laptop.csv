@@ -1,0 +1,25 @@
+Company,Device,Model,CPU,GPU,RAM,RAM Type,SSD,Display,PCF
+Dell,Laptop,Latitude 3150,Intel Pentium,Intel Integrated HD Graphics,8,1333 MHz DDR3L,,11.6,216
+Dell,Laptop,Latitude 3160,Intel Pentium,Intel Pentium,8,1600 MHz DDR3L,,11.6,244
+Dell,Laptop,Latitude 3180,"Intel Pentium Processor N4200 (6 W, 2 M cache, up to 2.5 GHz)",Intel HD Graphics 505,4,LPDDR3 SDRAM,128,,243
+Dell,Laptop,Latitude 3189 2-in-1,"Intel Pentium Processor N4200 (6 W, 2 M cache, up to 2.5 GHz)",Intel HD Graphics 505,8,LPDDR3 SDRAM,256,,257
+Dell,Laptop,Latitude 3190,"Intel Pentium Processor N5000 (6W, 4M cache, up to 2.7 GHz)",Intel HD Graphics 605,8,DDR4,256,11.6,226
+Dell,Laptop,Latitude 3190 2-in-1,"Intel Pentium Processor N5030 (6W, 4M cache, up to 3.1 GHz)",Intel HD Graphics 605,8,DDR4,256,11.6,230
+Dell,Laptop,Latitude 3350,Intel Pentium,Intel Integrated HD Graphics,16,1600 MHz DDR3L,,13.3,258
+Dell,Laptop,Latitude 3380,"Intel Core i5-7200U Processor (15W, 3M cache, up to 2.5 GHz)",Intel HD Graphics 620,8,DDR4 SDRAM,128,13.3,252
+Dell,Laptop,Latitude 3460,Intel Pentium,,16,1600 MHz,,14,279
+Dell,Laptop,Latitude 3470,6th Generation Intel i7,,16,1600 MHz,,14,286
+Dell,Laptop,Latitude 3480,"Intel Core i7-7500U (Dual Core, 2.7GHz, 4M cache, 15W)",Sky Lake: Intel HD Graphics 520,16,DDR4 SDRAM,256,14,324
+Dell,Laptop,Latitude 3490,"Intel Core i7-8550U (8 MB Cache, 4 cores, 15 W, up to 4.0GHz)",Intel HD Graphics 620,32,2400 MHz DDR4,512,14,243
+Dell,Laptop,Latitude 3570,6th Generation Intel i7,,16,1600 MHz,,14,302
+Dell,Laptop,Latitude 3580,"Intel Core i7-7500U (Dual Core, 2.7GHz, 4M cache, 15W)",Intel HD Graphics 620,16,DDR4 SDRAM,256,15.6,311
+Dell,Laptop,Latitude 3590,"Intel Core i7-8550U (8 MB Cache, 4 cores, 15 W, up to 4.0GHz)",Intel HD Graphics 620,32,2400 MHz DDR4,512,15.6,254
+Dell,Laptop,Inspiron 13 5320,12th Generation Intel Core i7 - 1260P,Intel Iris Xe Graphics,32,LPDDR5,2000,13.28,326
+Dell,Laptop,Inspiron 14 5420,12th Generation Intel Core i7 - 1260P,Intel UHD Graphics,24,DDR5,2000,14,344
+Dell,Laptop,Inspiron 14 5425,AMD Ryzen 7 5825U,AMD Radeon Graphics,32,DDR4,2000,14,345
+Dell,Laptop,Inspiron 14 Plus 7420,12th Generation Intel Core i7 - 12700H,Intel Iris Xe Graphics,40,DDR5,2000,14,376
+Dell,Laptop,Inspiron 14 7420 2-in-1,12th Generation Intel Core i7 - 1255U,Intel UHD Graphics,32,DDR4,2000,14,366
+Dell,Laptop,Inspiron 14 7425 2-in-1,AMD Ryzen 7 5825U,AMD Radeon Graphics,32,DDR4,2000,14,355
+Dell,Laptop,Inspiron 16 5620,12th Generation Intel Core i7 - 1260P,Intel UHD Graphics,24,DDR5,2000,16,386
+Dell,Laptop,Inspiron 16 5625,AMD Ryzen 7 5825U,AMD Radeon Graphics,32,DDR4,2000,16,381
+Dell,Laptop,Inspiron 16 7620 2-in-1,12th Generation Intel Core i7 - 1260P,Intel UHD Graphics,32,DDR4,1000,16,403

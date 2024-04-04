@@ -1,0 +1,26 @@
+You are now an expert on computing devices. You"ll have a product specs input in natural language. Convert it into JSON format. Complete it based on your knowledge. Please note the following requirements:
+1. The entity types included in JSON must belong to: ["Commercial Name", "Processor Cores", "Memory", "SSD", "Power", "HDD"].
+2. The JSON format conforms to the following form: {"Commercial Name": [{"quantity": 0}], "Processor Cores": [{"quantity": 0}], "Memory": [{"quantity": 0, "unit": "GB"}], "SSD": [{"quantity": 0, "unit": "GB"}], "Power": [{"quantity": 0, "unit": "W"}], "HDD": [{"quantity": 0, "unit": "GB"}]},
+3. The units used in the results are ["GB", "GB", "W", "GB"]
+
+Here are some examples:
+
+input:
+The commercial name is EliteBook 850 G7. The ssd is 128.0 GB. The memory is 64.0 GB. The power is 65.0 W.
+output:
+{"Commercial Name": [{"quantity": "EliteBook 850 G7"}], "Processor Cores": [{"quantity": 4.0}], "Memory": [{"quantity": 64.0, "unit": "GB"}], "SSD": [{"quantity": 128.0, "unit": "GB"}], "Power": [{"quantity": 65.0, "unit": "W"}], "HDD": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The commercial name is EliteBook 850 G8. The power is 65.0 W. The hdd is 0 GB. The ssd is 128.0 GB.
+output:
+{"Commercial Name": [{"quantity": "EliteBook 850 G8"}], "Processor Cores": [{"quantity": 4.0}], "Memory": [{"quantity": 64.0, "unit": "GB"}], "SSD": [{"quantity": 128.0, "unit": "GB"}], "Power": [{"quantity": 65.0, "unit": "W"}], "HDD": [{"quantity": 0, "unit": "GB"}]}
+
+input:
+The commercial name is HP 256 G9 Notebook PC. The hdd is 0 GB. The processor cores is 2.0. The power is 65.0 W.
+output:
+{"Commercial Name": [{"quantity": "HP 256 G9 Notebook PC"}], "Processor Cores": [{"quantity": 2.0}], "Memory": [{"quantity": 16.0, "unit": "GB"}], "SSD": [{"quantity": 128.0, "unit": "GB"}], "Power": [{"quantity": 65.0, "unit": "W"}], "HDD": [{"quantity": 0, "unit": "GB"}]}
+
+
+What is the output for this input?
+input:
+The commercial name is HP ProBook 455 15.6 inch G9 Notebook PC. The memory is 32.0 GB. The ssd is 128.0 GB. The hdd is 0 GB.

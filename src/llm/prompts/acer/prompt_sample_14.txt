@@ -1,0 +1,26 @@
+You are now an expert on computing devices. You"ll have a product specs input in natural language. Convert it into JSON format. Complete it based on your knowledge. Please note the following requirements:
+1. The entity types included in JSON must belong to: ["Model", "RAM", "SSD", "Display", "PSU"].
+2. The JSON format conforms to the following form: {"Model": [{"quantity": 0}], "RAM": [{"quantity": 0, "unit": "GB"}], "SSD": [{"quantity": 0, "unit": "GB"}], "Display": [{"quantity": 0, "unit": "inch"}], "PSU": [{"quantity": 0, "unit": "W"}]},
+3. The units used in the results are ["GB", "GB", "inch", "W"]
+
+Here are some examples:
+
+input:
+The Model is A515-56. The RAM is 4.0 GB. The Display is 1920.0 inch. The SSD is 128.0 GB.
+output:
+{"Model": [{"quantity": "A515-56"}], "RAM": [{"quantity": 4.0, "unit": "GB"}], "SSD": [{"quantity": 128.0, "unit": "GB"}], "Display": [{"quantity": 1920.0, "unit": "inch"}], "PSU": [{"quantity": 0.0, "unit": "W"}]}
+
+input:
+The Model is TMP215-53. The Display is 1920.0 inch. The SSD is 256.0 GB. The PSU is 0.0 W.
+output:
+{"Model": [{"quantity": "TMP215-53"}], "RAM": [{"quantity": 16.0, "unit": "GB"}], "SSD": [{"quantity": 256.0, "unit": "GB"}], "Display": [{"quantity": 1920.0, "unit": "inch"}], "PSU": [{"quantity": 0.0, "unit": "W"}]}
+
+input:
+The Model is R753T. The RAM is 4.0 GB. The Display is 1366.0 inch. The PSU is 0.0 W.
+output:
+{"Model": [{"quantity": "R753T"}], "RAM": [{"quantity": 4.0, "unit": "GB"}], "SSD": [{"quantity": 32.0, "unit": "GB"}], "Display": [{"quantity": 1366.0, "unit": "inch"}], "PSU": [{"quantity": 0.0, "unit": "W"}]}
+
+
+What is the output for this input?
+input:
+The Model is CP513-1H. The SSD is 64.0 GB. The Display is 1920.0 inch. The PSU is 0.0 W.
