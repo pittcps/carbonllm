@@ -50,10 +50,9 @@ train_dataset = load_dataset('csv', data_files='../input/train.csv', split='trai
 eval_dataset = load_dataset('csv', data_files='../input/test.csv', split='train')
 
 def generate_and_tokenize_prompt(data_point):
-    full_prompt = f"""You'll be provided with some questions and a reference. First, you must check whether the reference is relevant to the question and generate a token. If the reference is relevant, provide the answer of list type.
+    full_prompt = f"""You'll be provided with some questions and a reference. Based on the reference, provide the answer of list type.
 ### Question: {data_point['Question']}
-### Reference: {data_point['Reference text']}
-### Is Reference Text Relevant?: {data_point['Relevance token']}
+### Reference: {data_point['Text']}
 ### Answer: {data_point['Ground truth answer']}"""
 
     return tokenize(full_prompt)

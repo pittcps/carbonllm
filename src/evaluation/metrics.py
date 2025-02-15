@@ -42,11 +42,10 @@ def parse_evidence(evidence):
     keys = [list(map(int, re.findall(r'\d+', k))) for k in evidence_dict.keys()]
     return values, keys
 
-def compute_metrics(y_true, y_pred, token_true, token_pred):
-    rmse_list = []
+def compute_metrics(y_true, y_pred):
+    mse_list = []
     mae_list = []
     em_list = []
-    token_em_list = []
     total_cases = 0
     gt_zero_count = 0
     pred_zero_count = 0
@@ -77,44 +76,41 @@ def compute_metrics(y_true, y_pred, token_true, token_pred):
         if np.all(pred == 0):
             pred_zero_count += 1
 
-        rmse = np.mean((true - pred) ** 2)
-        rmse = rmse ** 0.5
+        mse = np.mean((true - pred) ** 2)
+        mse = mse ** 0.5
         mae = np.mean(np.abs(true - pred))
-        if rmse <= 40000:
-            rmse_list.append(rmse)
+
+        if mse <= 40000: # 40000
+            mse_list.append(mse)
             mae_list.append(mae)
         else:
+            # print("!")
             total_diff = np.sum(np.abs(true - pred))
-            print(f"Row {idx + 2}: GT: {true.tolist()} Predict: {pred.tolist()} Total difference: {total_diff:.4f} RMSE: {rmse:.4f} MAE: {mae:.4f}")
-            rmse_list.append(0)
+            print(f"Row {idx + 2}: GT: {true.tolist()} Predict: {pred.tolist()} Total difference: {total_diff:.4f} RMSE: {mse:.4f} MAE: {mae:.4f}")
+            mse_list.append(0)
             mae_list.append(0)
 
         exact_match = np.allclose(true, pred, atol=0.01)
         em_list.append(1 if exact_match else 0)
 
-        token_exact_match = token_true[idx] == token_pred[idx]
-        token_em_list.append(1 if token_exact_match else 0)
-
         total_cases += 1
 
-    avg_rmse = sum(rmse_list)/len(rmse_list)
+    avg_mse = np.mean(mse_list)
     avg_mae = np.mean(mae_list)
     avg_em = np.mean(em_list) * 100
-    avg_token_em = np.mean(token_em_list) * 100
 
     gt_zero_percent = (gt_zero_count / total_cases) * 100
     pred_zero_percent = (pred_zero_count / total_cases) * 100
 
-    return avg_rmse, avg_mae, avg_em, avg_token_em, gt_zero_percent, pred_zero_percent
+    return avg_mse, avg_mae, avg_em, gt_zero_percent, pred_zero_percent
 
-gt_df = pd.read_csv('../output/test.csv')
-predict_df = pd.read_csv('../input/prediction.csv')
+gt_df = pd.read_csv('../output/llama_fewshot_replaced.csv')
 
 gt_list = gt_df['Ground truth answer'].apply(
     lambda x: [] if x == '-' else ast.literal_eval(x)
 ).tolist()
 predict_list = []
-for item in predict_df['Answer']:
+for idx, item in enumerate(gt_df['Predicted answer']):
     try:
         value = ast.literal_eval(item)
         if isinstance(value, list):
@@ -124,19 +120,10 @@ for item in predict_df['Answer']:
     except (ValueError, SyntaxError):
         predict_list.append([])
 
-token_true = gt_df['Relevance token'].tolist()
-token_pred = predict_df['Relevance token'].tolist()
-
 min_length = min(len(gt_list), len(predict_list))
 gt_list = gt_list[:min_length]
 predict_list = predict_list[:min_length]
-token_true = token_true[:min_length]
-token_pred = token_pred[:min_length]
 
-avg_rmse, avg_mae, avg_em, avg_token_em, gt_zero_percent, pred_zero_percent = compute_metrics(gt_list, predict_list, token_true, token_pred)
+avg_mse, avg_mae, avg_em, gt_zero_percent, pred_zero_percent = compute_metrics(gt_list, predict_list)
 
-print("Total samples:", min_length)
-print(f"RMSE: {avg_rmse:.2f}")
-print(f"MAE: {avg_mae:.2f}")
-print(f"EM: {avg_em:.2f}%")
-print(f"Relevance Token EM: {avg_token_em:.2f}%")
+print(f"Total samples: {min_length} RMSE, MAE, EM: {avg_mse:.2f} & {avg_mae:.2f} & {avg_em:.2f}")

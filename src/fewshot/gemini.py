@@ -75,14 +75,19 @@ Example 1:
 ### Answer: [13.398, 231.0, 109.263]
 
 Example 2:
-### Question: What is the component with the highest carbon footprint percentage in the manufacturing breakdown of the HP Dragonfly Pro 2-in-1/ONE (ENERGY STAR) notebook?
-### Answer: [{{'mainboard': 63.4}}]
+### Question: What are the components with the highest and lowest carbon footprint percentages in the manufacturing breakdown of the Latitude 5310 2-in-1 laptop?
+### Answer: [{{'display': 37.2}}, {{'packaging': 0.4}}]
 
 Example 3:
-### Question: What are the top 3 components with the highest carbon footprint percentages in the manufacturing breakdown of the Latitude 7220 Rugged Extreme laptop?
-### Answer: [{{'display': 34.3}}, {{'mainboard': 21.1}}, {{'battery': 4.5}}]
+### Question: What are the top 5 components with the highest carbon footprint percentages in the manufacturing breakdown of the HP ZHAN 66 Pro A G4 All-in-One PC desktop?
+### Answer: [{{'display': 26.8}}, {{'mainboard': 25.7}}, {{'ssd': 24.9}}, {{'chassis': 13.3}}, {{'power': 3.3}}]
 
-Now the questions and shown below. What are the answers to the questions?
+Example 4:
+### Question: What is the carbon footprint of total in the Lenovo L28u-30?
+### Answer: [455.0]
+
+
+Now the questions and reference are shown below. What are the answers to the questions?
 ### Question: {row['Question']}
 ### Answer:"""
 

@@ -16,7 +16,7 @@ bnb_config = BitsAndBytesConfig(
 
 base_model = AutoModelForCausalLM.from_pretrained(
     base_model_id,
-    quantization_config=bnb_config,
+    quantization_config=bnb_config,  # Same quantization config as before
     device_map="auto",
     trust_remote_code=True,
 )
@@ -29,7 +29,7 @@ eval_tokenizer = AutoTokenizer.from_pretrained(
 
 from peft import PeftModel
 
-ft_model = PeftModel.from_pretrained(base_model, "../models/no-program")
+ft_model = PeftModel.from_pretrained(base_model, "../model/checkpoint-1800-llama")
 tokenizer = AutoTokenizer.from_pretrained(
     base_model_id,
     padding_side="left",
@@ -43,16 +43,16 @@ ft_model.eval()
 answers = []
 count = 0
 
-txt_file = "../output/no_program_output.txt"
+txt_file = "../output/llama_output.txt"
 f = open(txt_file, "w")
 original_stdout = sys.stdout
 sys.stdout = f
 
-with open('../output/no_program_results.csv', 'w', newline='') as csvfile:
-    fieldnames = ['Relevance token', 'Answer']
+with open('../output/llama_results.csv', 'w', newline='') as csvfile:
+    fieldnames = ['Answer']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
-with open('../output/no_program_output.csv', 'w', newline='') as csvfile:
+with open('../output/llama_output.csv', 'w', newline='') as csvfile:
     fieldnames = ['Output']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
@@ -62,12 +62,11 @@ with open('../input/test.csv', 'r') as file:
     for row in csv_reader:
         orig_output = []
         answer_row = ""
-        relevance_token = ""
 
-        eval_prompt = f"""You'll be provided with some questions and a reference. First, you must check whether the reference is relevant to the question and generate a token. If the reference is relevant, provide the answer of list type.
+        eval_prompt = f"""You'll be provided with some questions and a reference. Based on the reference, provide the answer of list type.
 ### Question: {row['Question']}
-### Reference: {row['Predicted text']}
-### Is Reference Text Relevant?:"""
+### Reference: {row['Text']}
+### Answer:"""
         model_input = tokenizer(eval_prompt, return_tensors="pt").to("cuda")
         run_times = 0
         while True:
@@ -75,12 +74,6 @@ with open('../input/test.csv', 'r') as file:
                 llm_output = eval_tokenizer.decode(ft_model.generate(**model_input, max_new_tokens=500)[0], skip_special_tokens=True)
             orig_output.append(llm_output)
 
-            if "False" in llm_output:
-                answer_row = ""
-                relevance_token = "False"
-                break
-
-            relevance_token = "True"
             pattern = r'### Answer:\s*(\[.*?\])'
             lst_match = re.search(pattern, llm_output, re.DOTALL)
             if lst_match:
@@ -98,11 +91,11 @@ with open('../input/test.csv', 'r') as file:
                 print("Answer is NULL")
                 break
 
-        with open('../output/no_program_results.csv', 'a', newline='') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=['Relevance token', 'Answer'])
-            writer.writerow({'Relevance token':relevance_token, 'Answer': answer_row})
+        with open('../output/llama_results.csv', 'a', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=['Answer'])
+            writer.writerow({'Answer': answer_row})
 
-        with open('../output/no_program_output.csv', 'a', newline='') as csvfile:
+        with open('../output/llama_output.csv', 'a', newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=['Output'])
             writer.writerow({'Output': orig_output})
 
