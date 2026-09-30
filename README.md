@@ -1,6 +1,10 @@
 # CarbonLLM
 
-Scripts for answering product carbon footprint questions from product carbon footprint (PCF) text. The repo fine-tunes Llama 3 8B, runs few-shot prompts on other models, retrieves relevant product text with TF-IDF, and scores numeric answers.
+Code for [CarbonPDF](https://doi.org/10.1145/3744255.3798128), a question-answering method that extracts product carbon footprints from sustainability reports. These scripts fine-tune Llama 3 8B, run few-shot prompts on other models, retrieve relevant product text with TF-IDF, and score numeric answers.
+
+- Paper: [Extracting Product Carbon Footprint in PDF Documents using Question Answering Framework](https://dl.acm.org/doi/10.1145/3744255.3798128) (E-Energy '26)
+- Dataset paper: [An electronic product carbon footprint dataset for question answering](https://www.nature.com/articles/s41597-026-06544-5) (*Scientific Data*, 2026)
+- Dataset: [CarbonPDF on AWS](https://registry.opendata.aws/carbonpdf/) and [pittcps/carbonpdf-dataset](https://github.com/pittcps/carbonpdf-dataset)
 
 ## Layout
 
@@ -19,7 +23,7 @@ Run each script from its own directory. Paths such as `../input/train.csv` are r
 
 ## Data
 
-Place these files under `src/input/`. They are not in the repository.
+Questions and product text come from [CarbonPDF-QA](https://registry.opendata.aws/carbonpdf/) (CC BY 4.0). The dataset and collection scripts are in [pittcps/carbonpdf-dataset](https://github.com/pittcps/carbonpdf-dataset). Place the CSVs this repo expects under `src/input/`. They are not included here.
 
 | File | Used by | Columns |
 | --- | --- | --- |
@@ -88,3 +92,37 @@ python retrieve_topK.py     # top-10 product texts per question, recall printed 
 ```
 
 `retrieve_topK.py` writes `src/output/test_relevant_top10.csv` and reports how often the ground-truth product is inside the top 10.
+
+## Citation
+
+If you use this code, please cite the E-Energy paper. If you use the CarbonPDF-QA data, please also cite the *Scientific Data* paper.
+
+```bibtex
+@inproceedings{zhao2026carbonpdf,
+  author = {Zhao, Kaiwen and Balaji, Bharathan and Lee, Stephen},
+  title = {Extracting Product Carbon Footprint in PDF Documents using Question Answering Framework},
+  year = {2026},
+  isbn = {9798400720116},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3744255.3798128},
+  doi = {10.1145/3744255.3798128},
+  booktitle = {Proceedings of the 17th ACM International Conference on Future and Sustainable Energy Systems},
+  pages = {584--596},
+  numpages = {13},
+  keywords = {Information retrieval, Question answering},
+  series = {E-Energy '26}
+}
+
+@article{zhao2026carbonpdfqa,
+  author = {Zhao, Kaiwen and Koyatan Chathoth, Ajesh and Balaji, Bharathan and Lee, Stephen},
+  title = {An electronic product carbon footprint dataset for question answering},
+  journal = {Scientific Data},
+  year = {2026},
+  volume = {13},
+  number = {1},
+  pages = {228},
+  doi = {10.1038/s41597-026-06544-5},
+  url = {https://doi.org/10.1038/s41597-026-06544-5}
+}
+```
